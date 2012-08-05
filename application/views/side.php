@@ -1,7 +1,7 @@
 ﻿<dl>
     <dt>热门文章</dt>
     <?php foreach($topx_rows as $row){ ?>
-    <dd><a href="/index.php/article/<?php echo $row->id; ?>" title="<?php echo $row->title; ?>"><?php echo $blogInfo->clip_text($row->title, 13); ?></a></dd>
+    <dd><a href="/index.php/article/<?php echo $row->id; ?>" title="<?php echo $row->title; ?>"><?php echo $blogInfo->clip_text($row->title, 30); ?></a></dd>
     <?php } ?>
 </dl>
 <dl class="category">
