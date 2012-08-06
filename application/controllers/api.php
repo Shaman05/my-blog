@@ -14,7 +14,6 @@
         public $page = array();
 
         public function get_more_article($num = 5){
-            sleep(1);
             $this->load->model('Blog');
             $category = $_POST['category'];
             $offset = $_POST['offset'];

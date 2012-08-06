@@ -14,6 +14,29 @@
             <div class="art-cont">
                 <?php echo $article->content; ?>
             </div>
+            <div class="comments art-cont">
+                <h4>评论</h4>
+                <div class="com-list">
+                </div>
+                <div class="com-form">
+                    <h5>Name:</h5>
+                    <div>
+                        <input type="text" id="com-name"><span>*</span>
+                    </div>
+                    <h5>Email:</h5>
+                    <div>
+                        <input type="text" id="com-email">
+                    </div>
+                    <h5>Website:</h5>
+                    <div>
+                        <input type="text" id="com-website">
+                    </div>
+                    <h5>Comment</h5>
+                    <div>
+                        <textarea id="com-content"></textarea>
+                    </div>
+                </div>
+            </div>
             <div class="prev-art">
                 <?php if($prev_article !== 0){ ?>
                 上一篇：<a href="/index.php/article/<?php echo $prev_article->id; ?>"><?php echo $prev_article->title; ?></a>
@@ -27,9 +50,6 @@
                 <?php }else{ ?>
                 下一篇：木有了
                 <?php } ?>
-            </div>
-            <div class="comments">
-                <h4>评论</h4>
             </div>
         </div>
     </div>

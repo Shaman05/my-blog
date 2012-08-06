@@ -325,3 +325,14 @@ body{
 .blog-log ol li{
     margin-left: 2em;
 }
+.comments h4{
+    padding: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1px dotted #666;
+}
+.com-form h5{
+    margin-top: 12px;
+}
+.com-form input{
+    border: 1px solid #DDD;
+}
