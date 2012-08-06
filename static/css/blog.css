@@ -305,3 +305,23 @@ body{
     padding-bottom:9999px;
     margin-bottom:-9999px;
 }
+.fancy-box{
+    display: none;
+}
+.blog-log{
+    width: 500px;
+    height: 320px;
+    overflow: auto;
+}
+.blog-log h4{
+    font-size: 14px;
+}
+.blog-log ul{
+    margin-left: 1em;
+}
+.blog-log ul > li{
+    padding: 4px 0;
+}
+.blog-log ol li{
+    margin-left: 2em;
+}

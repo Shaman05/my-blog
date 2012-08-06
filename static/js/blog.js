@@ -56,6 +56,8 @@ $(function(){
     });
 
     jQuery.syntax();
+
+    $(".fancybox-show").fancybox();
 });
 
 function doSearch(){

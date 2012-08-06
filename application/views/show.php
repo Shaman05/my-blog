@@ -28,6 +28,9 @@
                 下一篇：木有了
                 <?php } ?>
             </div>
+            <div class="comments">
+                <h4>评论</h4>
+            </div>
         </div>
     </div>
     <div class="top-down">

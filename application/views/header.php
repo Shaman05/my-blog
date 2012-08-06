@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="Keyword" content="">
     <meta name="Description" content="">
-    <link type="text/css" rel="stylesheet" href="/static/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/static/js/fancybox/jquery.fancybox-1.3.4.css">
 </head>
 
 <body>
