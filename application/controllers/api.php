@@ -25,4 +25,16 @@
 
             $this->load->view('article_block', $page);
         }
+
+        public function submit_comment(){
+            $this->load->model('Blog');
+            $aid = $_POST['aid'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $website = $_POST['website'];
+            $content = $_POST['content'];
+            
+            $message = $this->Blog->submit_comment($aid, $name, $email, $website, $content);
+            echo json_encode($message);
+        }
     }

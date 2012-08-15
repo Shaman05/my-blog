@@ -16,7 +16,7 @@
         <?php echo $row->short_desc; ?>
     </div>
     <div class="art-footer">
-        <a href="#" title="去发表评论"><?php echo $row->comments; ?>个评论</a>&nbsp;&nbsp;
+        <a class="go-comment" href="/index.php/article/<?php echo $row->id;?>#comment" title="去发表评论"><?php echo $row->comments; ?>个评论</a>&nbsp;&nbsp;
         <a href="/index.php/article/<?php echo $row->id;?>" title="阅读全文">阅读全文</a>
     </div>
 </div>

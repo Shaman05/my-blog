@@ -12,7 +12,8 @@ h1{ font-size:18px }
 h2{ font-size:16px }
 h3{ font-size:16px }
 h4, h5, h6{ font-size:100% }
-ul{ list-style:none }
+ul,ol{ list-style:none }
+.syntax-container ol{list-style-type: decimal;}
 a{color:#5D79AE }
 a:hover,.side a:hover{color:#ff6600 }
 q:before, q:after{ content:'' }
@@ -148,7 +149,6 @@ body{
     background:url("../images/footer_bg.jpg") repeat 0 0;
     border-radius:3px;
     box-shadow:0 0 8px 1px rgba(0, 0, 0, 0.5);
-    overflow:hidden;
     position:relative;
 }
 .main{
@@ -179,6 +179,9 @@ body{
     margin:0 30px;
     padding:20px 0;
     border-bottom:1px dotted #666;
+}
+.search-cont,.about-me{
+    overflow: hidden;
 }
 .about-me .section{
     margin:30px;
@@ -301,10 +304,6 @@ body{
     color:#969696;
     text-shadow: 0 1px rgba(0, 0, 0, 0.7);
 }
-.main,.side{
-    padding-bottom:9999px;
-    margin-bottom:-9999px;
-}
 .fancy-box{
     display: none;
 }
@@ -326,13 +325,50 @@ body{
     margin-left: 2em;
 }
 .comments h4{
-    padding: 6px;
+    padding: 6px 0;
+    font-size: 14px;
     margin-bottom: 6px;
     border-bottom: 1px dotted #666;
 }
-.com-form h5{
+.com-form h5,.submit-btn
+{
     margin-top: 12px;
 }
-.com-form input{
+.com-form h5{
+    font-size: 12px;
+}
+.com-form input,.com-form textarea{
     border: 1px solid #DDD;
+    padding: 2px;
+    line-height: 16px;
+}
+.com-form span{
+    color: red;
+    margin-left: 4px;
+}
+#com-error{
+    display: none;
+}
+.com-form textarea{
+    width: 600px;
+    height: 160px;
+    max-width: 600px;
+}
+.submit-btn{
+    display: inline-block;
+    width: 124px;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #DDD;
+    text-decoration: none;
+    background: #EFEFEF;
+}
+.com-list li{
+    background: #EEEEEE;
+    padding: 4px 8px;
+    margin-top: 4px;
+}
+.com-list li p{
+    margin-top: 2px;
 }

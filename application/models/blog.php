@@ -145,4 +145,28 @@
             $tagArr = array_unique($tagArr);
             return $tagArr;
         }
+
+        //获取评论
+        function get_comments($aid){
+            $sql = 'select * from comment where aid="'.$aid.'" order by c_time asc';
+            $query = $this->db->query($sql);
+            return $query->result_array();
+        }
+
+        //写入评论
+        function submit_comment($aid, $name, $email=NULL, $website=NULL, $content){
+            $message = array('status' => false, 'text' => 'error!');
+            if(!$name || !$content){
+                $message['text'] = '姓名或者内容不能为空！';
+                return $message;
+            }
+            $sql = 'insert into comment (aid,name,email,site,content) values ("'.$aid.'","'.$name.'","'.$email.'","'.$website.'","'.$content.'")';
+            if($this->db->query($sql)){
+                $message['status'] = true;
+                $message['text'] = '添加评论成功！';
+            }else{
+                $message['text'] = '评论失败！';
+            }
+            return $message;
+        }
     }

@@ -14,27 +14,41 @@
             <div class="art-cont">
                 <?php echo $article->content; ?>
             </div>
-            <div class="comments art-cont">
+            <div class="comments art-cont" id="comment">
                 <h4>评论</h4>
                 <div class="com-list">
+                    <?php if(sizeof($comments) == 0){ ?>
+                    <p>本文尚无评论。</p>
+                    <?php }else{ ?>
+                    <ul class="com-list">
+                        <?php foreach ($comments as $item) { ?>
+                        <li>
+                            <div><a href="#"><?php echo $item['name']; ?></a> 在 <span><?php echo $item['c_time']; ?></a></span> 发表了评论:</div>
+                            <p><?php echo $item['content']; ?></p>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                    <?php } ?>
                 </div>
                 <div class="com-form">
-                    <h5>Name:</h5>
+                    <h5>Name<span>*</span></h5>
                     <div>
-                        <input type="text" id="com-name"><span>*</span>
+                        <input type="text" id="com-name">
                     </div>
-                    <h5>Email:</h5>
+                    <h5>Email</h5>
                     <div>
                         <input type="text" id="com-email">
                     </div>
-                    <h5>Website:</h5>
+                    <h5>Website</h5>
                     <div>
                         <input type="text" id="com-website">
                     </div>
-                    <h5>Comment</h5>
+                    <h5>Comment<span>*</span></h5>
                     <div>
                         <textarea id="com-content"></textarea>
                     </div>
+                    <a class="submit-btn" href="javascript:submitComment('<?php echo $aid; ?>')" title="提价评论">提交评论</a>
+                    <span id="com-error">姓名或者内容不能为空！</span>
                 </div>
             </div>
             <div class="prev-art">

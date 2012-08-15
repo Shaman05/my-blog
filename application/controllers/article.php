@@ -52,6 +52,7 @@
 
             //当前页数据
             $this->load->model('Blog');
+            $page['aid'] = $aid;
             $page['article'] = $this->Blog->show_article($aid);
             if(count($page['article']) == 0){
                 $message['error_text'] = '您查看的文章不存在或已经移除了。';
@@ -65,6 +66,7 @@
             $page['categorys'] = $this->Blog->get_category_and_count();
             $page['archives'] = $this->Blog->archives();
             $page['tags'] = $this->Blog->get_tags();
+            $page['comments'] = $this->Blog->get_comments($aid);
 
             //header和footer
             $header['title'] = $blog->name . ' - '.$page['article']->title;
