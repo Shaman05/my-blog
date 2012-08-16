@@ -164,9 +164,23 @@
             if($this->db->query($sql)){
                 $message['status'] = true;
                 $message['text'] = '添加评论成功！';
+                $update = 'update article set comments=comments+1 where id="'.$aid.'"';
+                $this->db->query($update);
             }else{
                 $message['text'] = '评论失败！';
             }
             return $message;
+        }
+
+        //获取id为$aid的最后一条评论
+        function get_last_comment($aid){
+            $sql = 'select * from comment where aid="'.$aid.'" order by c_time desc limit 1';
+            $query = $this->db->query($sql);
+            $row = $query->row_array();
+            $html = '<li>'.
+                        '<div><a href="'.$row['site'].'">'.$row['name'].'</a> 在 <span>'.$row['c_time'].'</a></span> 发表了评论:</div>'.
+                        '<p>'.$row['content'].'</p>'.
+                    '</li>';
+            return $html;
         }
     }

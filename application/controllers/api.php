@@ -37,4 +37,11 @@
             $message = $this->Blog->submit_comment($aid, $name, $email, $website, $content);
             echo json_encode($message);
         }
+
+        public function get_last_comment($aid){
+            $this->load->model('Blog');
+            $html = $this->Blog->get_last_comment($aid);
+
+            echo $html;
+        }
     }

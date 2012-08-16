@@ -105,14 +105,37 @@ function submitComment(aid){
         return;
     }
     error.hide();
-    $.post('/index.php/api/submit_comment', {'aid':aid, 'name':name, 'email':email, 'website':website, 'content':content}, function(data){
-        console.log(error)
-        console.log(data)
-        error.text(data.text).show();
-        if(data.status){
-            error.delay(2000).hide();
+
+    $.ajax({
+        url : '/index.php/api/submit_comment',
+        type : 'POST',
+        data : {'aid':aid, 'name':name, 'email':email, 'website':website, 'content':content},
+        dataType : 'JSON',
+        success : function(data){
+            error.text(data.text).show();
+            if(data.status){
+                $("#com-name,#com-email,#com-website,#com-content").val('');
+                getLastComment(aid);
+                setTimeout(function(){
+                    error.hide();
+                },1000);
+            }    
         }
-    })
+    });
+}
+
+function getLastComment(aid){
+    var list = $(".com-list");
+    $.ajax({
+        url : '/index.php/api/get_last_comment/' + aid,
+        dataType : 'HTML',
+        success : function(html){
+            if(list.find("ul").size() == 0){
+                list.html("<ul></ul>");
+            }
+            $(html).appendTo(list.find("ul"));
+        }
+    });
 }
 
 jQuery.nv = function(){

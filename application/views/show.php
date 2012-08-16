@@ -20,7 +20,7 @@
                     <?php if(sizeof($comments) == 0){ ?>
                     <p>本文尚无评论。</p>
                     <?php }else{ ?>
-                    <ul class="com-list">
+                    <ul>
                         <?php foreach ($comments as $item) { ?>
                         <li>
                             <div><a href="#"><?php echo $item['name']; ?></a> 在 <span><?php echo $item['c_time']; ?></a></span> 发表了评论:</div>
