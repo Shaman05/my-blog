@@ -59,8 +59,6 @@ $(function(){
 
     jQuery.syntax();
 
-    $(".fancybox-show").fancybox();
-
     function displayIt(){
         var o = $(".top-down");
         var sh = scrollObj.scrollTop();
@@ -136,6 +134,10 @@ function getLastComment(aid){
             $(html).appendTo(list.find("ul"));
         }
     });
+}
+
+function displayLog(){
+    $(".blog-log").toggle(0);
 }
 
 jQuery.nv = function(){

@@ -5,7 +5,6 @@
 </div>
 <script type="text/javascript" src="/static/js/jquery.js"></script>
 <script type="text/ecmascript" src="/static/js/codeHighlight/jquery.syntax.min.js"></script>
-<script type="text/javascript" src="/static/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <script type="text/javascript" src="/static/js/blog.js"></script>
 </body>
 </html>

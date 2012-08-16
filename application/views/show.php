@@ -23,7 +23,7 @@
                     <ul>
                         <?php foreach ($comments as $item) { ?>
                         <li>
-                            <div><a href="#"><?php echo $item['name']; ?></a> 在 <span><?php echo $item['c_time']; ?></a></span> 发表了评论:</div>
+                            <div><a href="<?php echo $item['site']; ?>"><?php echo $item['name']; ?></a> 在 <span><?php echo $item['c_time']; ?></a></span> 发表了评论:</div>
                             <p><?php echo $item['content']; ?></p>
                         </li>
                         <?php } ?>

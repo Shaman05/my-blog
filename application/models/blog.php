@@ -26,6 +26,8 @@
         function show_article($aid){
             if(!$aid)return;
             $sql = 'select * from article where id="'.$aid.'"';
+            $update = 'update article set hits=hits+1 where id="'.$aid.'"';
+            $this->db->query($update);
             $query = $this->db->query($sql);
             return $query->row();
         }
