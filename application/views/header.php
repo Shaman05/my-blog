@@ -3,15 +3,15 @@
 <head>
     <title><?php echo $title; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="Keyword" content="">
-    <meta name="Description" content="">
+    <meta name="Keyword" content="shaman的个人博客">
+    <meta name="Description" content="shaman的个人博客，关注前端动态，关注html5 css3 xhtml css javascript jquery php ajax nodejs svg">
     <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
     <link rel="stylesheet" type="text/css" href="/static/js/fancybox/jquery.fancybox-1.3.4.css">
 </head>
 
 <body>
 <div class="header clearfix">
-    <h1><a href="/"><?php echo $blogInfo->name; ?></a> <span><?php echo $blogInfo->discripte; ?></span></h1>
+    <h2><a href="/"><?php echo $blogInfo->name; ?></a> <span><?php echo $blogInfo->discripte; ?></span></h2>
     <div class="nav">
         <ul class="clearfix">
             <li><a class="home" href="/">主页</a></li>

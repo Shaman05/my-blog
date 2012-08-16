@@ -4,7 +4,7 @@
     </div>
     <div class="main">
         <div class="article art-show">
-            <h3 class="art-title"><?php echo $article->title; ?></h3>
+            <h1 class="art-title"><?php echo $article->title; ?></h1>
             <div class="art-info">
                 <?php echo $article->author; ?> 发表于 <?php echo $article->pub_date; ?>&nbsp;&nbsp;
                 文章分类：<a href="#" title="查看 <?php echo $article->category; ?> 下的文章"><?php echo $article->category; ?></a>&nbsp;&nbsp;

@@ -38,7 +38,7 @@ body{
     text-align:right;
     position:relative;
 }
-.header h1{
+.header h2{
     position:absolute;
     left:0;
     line-height:100%;
@@ -46,12 +46,12 @@ body{
     color:#EEEEEE;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.8);
 }
-.header h1 a{
+.header h2 a{
     text-decoration:none;
     font-style:italic;
     color:#FF9900;
 }
-.header h1 span{
+.header h2 span{
     font-size:12px;
     font-weight:normal;
     margin-left:1em;
