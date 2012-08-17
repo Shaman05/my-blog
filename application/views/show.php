@@ -7,9 +7,12 @@
             <h1 class="art-title"><?php echo $article->title; ?></h1>
             <div class="art-info">
                 <?php echo $article->author; ?> 发表于 <?php echo $article->pub_date; ?>&nbsp;&nbsp;
-                文章分类：<a href="#" title="查看 <?php echo $article->category; ?> 下的文章"><?php echo $article->category; ?></a>&nbsp;&nbsp;
-                标签：<a href="#" title="查看包含 <?php echo $article->tag; ?> 标签的文章"><?php echo $article->tag; ?></a>&nbsp;&nbsp;
-                有<em><?php echo $article->hits; ?></em>个同学来打过酱油
+                文章分类：<a href="/index.php/article/<?php echo $article->category; ?>" title="查看 <?php echo $article->category; ?> 下的文章"><?php echo $article->category; ?></a>&nbsp;&nbsp;
+                标签：
+                <?php foreach(explode(',',$article->tag) as $tag){ ?>
+                <a href="/index.php/tag/<?php echo $tag; ?>" title="查看包含 <?php echo $tag; ?> 标签的文章"><?php echo $tag; ?></a>
+                <?php } ?>
+                &nbsp;&nbsp;有<em><?php echo $article->hits; ?></em>个同学来打过酱油
             </div>
             <div class="art-cont">
                 <?php echo $article->content; ?>
@@ -41,7 +44,7 @@
                     </div>
                     <h5>Website</h5>
                     <div>
-                        <input type="text" id="com-website">
+                        <input type="text" id="com-website" value="http://">
                     </div>
                     <h5>Comment<span>*</span></h5>
                     <div>

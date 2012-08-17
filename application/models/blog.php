@@ -187,4 +187,11 @@
                     '</li>';
             return $html;
         }
+
+        //文章归档
+        function get_archives(){
+            $sql = 'select id,title,pub_date from article order by pub_date desc';
+            $query = $this->db->query($sql);
+            return $query->result_array();
+        }
     }

@@ -41,6 +41,7 @@
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 $route['article/(:num)'] = 'article/show/$1';
+$route['archives'] = 'article/archives';
 $route['article/(:any)'] = 'article/category/$1';
 $route['tag/(:any)'] = 'article/tag/$1';
 $route['search/(:any)'] = 'article/search/$1';

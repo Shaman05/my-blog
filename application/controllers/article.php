@@ -100,7 +100,8 @@
             $this->load->view('footer', $footer);
         }
 
-        function tag($tag){
+        //标签页
+        public function tag($tag){
             $tag = urldecode($tag);
             $blog = new Myblog();
 
@@ -122,6 +123,23 @@
 
             $this->load->view('header', $header);
             $this->load->view('index', $page);
+            $this->load->view('footer', $footer);
+        }
+
+        //文章归档
+        public function archives(){
+            $blog = new Myblog();
+            
+            $this->load->model('Blog');
+            $page['artList'] = $this->Blog->get_archives();
+
+            //header和footer
+            $header['title'] = $blog->name . ' - 文章归档';
+            $header['blogInfo'] = $blog;
+            $footer['blogInfo'] = $blog;
+
+            $this->load->view('header', $header);
+            $this->load->view('archives', $page);
             $this->load->view('footer', $footer);
         }
     }

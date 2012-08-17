@@ -20,7 +20,7 @@ q:before, q:after{ content:'' }
 legend{ color:#000 }
 fieldset, img{ border:none }
 button, input, select, textarea{ font-size:100% }
-table{ border-collapse:collapse; border-spacing:0 }
+/*table{ border-collapse:collapse; border-spacing:0 }*/
 .clearfix{zoom:1}
 .clearfix:after{ display:block; height:0; font-size:0; line-height:0; clear:both; visibility:hidden; content:'' }
 
@@ -200,13 +200,30 @@ body{
     vertical-align:bottom;
 }
 .art-cont,.section{
-    color: #626C80;
     margin:6px 0;
+}
+.archives-count{
+    padding: 16px 30px 8px;
+    color:#FFFFFF;
+    font-size: 14px;
+}
+.art-cont,.section,.archives-cont{
+    color: #626C80;
     text-shadow: 0 1px rgba(255, 255, 255, 0.7);
     padding:12px 20px;
     background:#FFF;
     box-shadow: 0 0 4px black inset;
     border-radius:4px;
+}
+.archives-cont{
+    margin: 0 30px 30px;
+}
+.archives-cont li{
+    padding-bottom: 4px;
+}
+.archives-cont li span{
+    margin-left: 1em;
+    color: #898989;
 }
 .art-show .art-title,.art-show .art-info{
     text-align:center;
@@ -268,9 +285,6 @@ body{
 }
 .side dd{
     padding-left:10px;
-    /*white-space:nowrap;
-    width:120px;
-    text-overflow:clip;*/
 }
 .side a{
     color:#e7e7ea;
