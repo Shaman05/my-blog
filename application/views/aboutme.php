@@ -60,6 +60,12 @@
                     <li>完成评论功能模块</li>
                 </ol>
             </li>
+            <li>
+                <strong>2012-08-17</strong>
+                <ol>
+                    <li>添加标签云功能</li>
+                </ol>
+            </li>
         </ul>
         <br>
         <div class="guest-book">
