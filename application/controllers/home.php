@@ -23,6 +23,7 @@
             $this->load->model('Blog');
             $page['c'] = 'null';
             $page['artList'] = $this->Blog->get_article($artNum);
+            $page['displayMore'] = TRUE;
             $topX = $blog->topXarticle;
             $page['topx_rows'] = $this->Blog->get_topX_article($topX);
             $page['categorys'] = $this->Blog->get_category_and_count();

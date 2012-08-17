@@ -44,7 +44,7 @@
 
         //获取搜索关键字文章列表
         function get_tag_article($tag, $num){
-            $sql = 'select * from article where tag like "%'.$tag.'%" order by pub_date desc limit '.$num;
+            $sql = 'select * from article where tag like "%'.$tag.'%" order by pub_date desc';
             $query = $this -> db -> query($sql);
             return $query->result();
         }
@@ -141,10 +141,11 @@
             }
             foreach($query->result_array() as $row){
                 foreach(explode(',',$row['tag']) as $tag){
-                    $tag !== '' && $tagArr[] = $tag;
+                    $tag !== '' && $tagArr[] = strtolower($tag);
                 }
             }
-            $tagArr = array_unique($tagArr);
+            //$tagArr = array_unique($tagArr);
+            $tagArr = array_count_values($tagArr);
             return $tagArr;
         }
 

@@ -25,6 +25,7 @@
             $artNum = $blog->defaultArtListNum;
             $page['c'] = $category;
             $page['artList'] = $this->Blog->get_article($artNum, $category);
+            $page['displayMore'] = TRUE;
             if(count($page['artList']) == 0){
                 $message['error_text'] = '您查看的栏目不存在或已被移除！';
                 $this->load->view('../errors/error_404_noresult',$message);
@@ -110,6 +111,12 @@
             $artNum = $blog->defaultArtListNum;
             $page['c'] = $tag;
             $page['artList'] = $this->Blog->get_tag_article($tag, $artNum);
+            $page['displayMore'] = FALSE;
+            if(count($page['artList']) == 0){
+                $message['error_text'] = '您查看的标签不存在或已被移除！';
+                $this->load->view('../errors/error_404_noresult',$message);
+                return;
+            }
             $topX = $blog->topXarticle;
             $page['topx_rows'] = $this->Blog->get_topX_article($topX);
             $page['categorys'] = $this->Blog->get_category_and_count();

@@ -57,6 +57,8 @@ $(function(){
         return false;
     });
 
+    tagCloud($(".tags a") , 12, 24);
+
     jQuery.syntax();
 
     function displayIt(){
@@ -138,6 +140,24 @@ function getLastComment(aid){
 
 function displayLog(){
     $(".blog-log").toggle(0);
+}
+
+function tagCloud(elems, minFs, maxFs){
+    var total = 0;
+    if(!elems)return;
+    elems.each(function(){
+        total += parseInt($(this).attr("rel"));
+    })
+    elems.each(function(){
+        var fs, cur = parseInt($(this).attr("rel"));
+        if(cur === 1){
+            fs = minFs;
+        }else{
+            fs = minFs + Math.ceil((cur/total)*minFs);
+            fs = fs > maxFs ? maxFs : fs;
+        }
+        $(this).css("font-size", fs + "px");
+    })
 }
 
 jQuery.nv = function(){

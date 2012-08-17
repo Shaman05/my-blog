@@ -13,8 +13,8 @@
 <dl>
     <dt>标签云</dt>
     <dd class="tags">
-        <?php foreach($tags as $row){ ?>
-        <a href="/index.php/tag/<?php echo $row; ?>"><?php echo $row; ?></a>
+        <?php foreach($tags as $key=>$value){ ?>
+        <a href="/index.php/tag/<?php echo $key; ?>" rel="<?php echo $value; ?>"><?php echo $key; ?></a>
         <?php } ?>
     </dd>
 </dl>
