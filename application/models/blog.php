@@ -162,6 +162,8 @@
                 $message['text'] = '姓名或者内容不能为空！';
                 return $message;
             }
+            $content = htmlspecialchars($content);
+            $content = str_replace("\n","<br>",str_replace(" ","&nbsp;",$content));
             $sql = 'insert into comment (aid,name,email,site,content) values ("'.$aid.'","'.$name.'","'.$email.'","'.$website.'","'.$content.'")';
             if($this->db->query($sql)){
                 $message['status'] = true;

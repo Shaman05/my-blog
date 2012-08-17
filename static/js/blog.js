@@ -99,7 +99,7 @@ function submitComment(aid){
         website = $.trim($("#com-website").val()),
         content = $.trim($("#com-content").val());
     if(!name || !content){
-        error.show();
+        error.text("姓名或者内容不能为空！").show();
         return;
     }
     error.hide();

@@ -6,6 +6,7 @@
     <meta name="Keyword" content="shaman的个人博客">
     <meta name="Description" content="shaman的个人博客，关注前端动态，关注html5 css3 xhtml css javascript jquery php ajax nodejs svg">
     <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
+    <link rel="shortcut icon" href="/favicon.ico">
 </head>
 
 <body>
