@@ -19,8 +19,8 @@
     </dd>
 </dl>
 <dl>
-    <dt>文章归档</dt>
+    <dt>网上邻居</dt>
     <?php foreach($archives as $row){ ?>
-    <dd><a href="#"><?php echo $row; ?></a></dd>
+    <dd><a href="<?php echo $row['url']; ?>" title="<?php echo $row['description']; ?>" target="_blank"><?php echo $row['name']; ?></a></dd>
     <?php } ?>
 </dl>

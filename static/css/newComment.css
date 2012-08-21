@@ -5,9 +5,12 @@
  * Date: 12-7-30
  * Time: 下午9:36
  */
-.dl_post_content p{
+.dl_publish_success,
+.dl_post_content p
+{
     color: #222222;
 }
+.dl_publish_success a,
 .dl_control_message .dl_control_time,
 .dl_post_function .dl_function_reply a,
 .dl_post_function .dl_function_like a,

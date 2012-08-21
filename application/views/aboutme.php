@@ -67,6 +67,13 @@
                     <li>添加标签云功能</li>
                 </ol>
             </li>
+            <li>
+                <strong>2012-08-21</strong>
+                <ol>
+                    <li>添加网上邻居</li>
+                    <li>添加留言板（<a href="http://open.denglu.cc" target="_blank" title="灯鹭">灯鹭</a>）</li>
+                </ol>
+            </li>
         </ul>
         <br>
         <div class="guest-book">

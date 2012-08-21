@@ -105,14 +105,18 @@
 
         //文章归档
         function archives(){
-            $date_arr = array();
+            /*$date_arr = array();
             $sql = 'select pub_date from article order by pub_date desc';
             $result = mysql_query($sql);
             while($row = mysql_fetch_array($result)){
                 $date_arr[] = date("Y-m",strtotime($row["pub_date"]));
             }
             $date_arr = array_unique($date_arr);
-            return $date_arr;
+            return $date_arr;*/
+
+            $sql = 'select * from flinks';
+            $query = $this->db->query($sql);
+            return $query->result_array();
         }
 
         //获取月份文章

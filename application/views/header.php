@@ -23,9 +23,10 @@
                     <a href="/index.php/article/javascript">Javascript</a>
                 </div>
             </li>
-            <li><a class="current" href="/index.php/article/nodejs">Nodejs</a></li>
             <li><a href="/index.php/archives">文章归档</a></li>
             <li><a href="/index.php/aboutme">关于我</a></li>
+            <li><a href="/index.php/article/nodejs">Nodejs</a></li>
+            <li><a href="/old/lab/">Lab</a></li>
             <li class="search">
                 <a href="javascript:doSearch();"><span>Search</span></a>
                 <div class="sub-nav">
