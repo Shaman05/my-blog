@@ -382,3 +382,6 @@ body{
 .com-list li p{
     margin-top: 2px;
 }
+.about-me p,.about-me div,.about-me a,.about-me span{
+    color: #333;
+}

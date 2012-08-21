@@ -63,6 +63,7 @@
             <li>
                 <strong>2012-08-17</strong>
                 <ol>
+                    <li>添加文章归档</li>
                     <li>添加标签云功能</li>
                 </ol>
             </li>
@@ -70,6 +71,7 @@
         <br>
         <div class="guest-book">
             <h4>留言板：</h4>
+            <script type='text/javascript' charset='utf-8' src='http://open.denglu.cc/connect/commentcode?appid=60125denKG6kCzJZ97AZc72JeTI0DA'></script>
         </div>
     </div>
 </div>
