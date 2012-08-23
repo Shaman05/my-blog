@@ -23,7 +23,7 @@
                 exit;
             }
 
-            $this->load->view('article_block', $page);
+            $this->load->view('blog/article_block', $page);
         }
 
         public function submit_comment(){
