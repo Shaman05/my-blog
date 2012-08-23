@@ -19,7 +19,7 @@
 					<td align="center"><?php echo $item["email"]; ?></td>
 					<td><?php echo $item["site"]; ?></td>
 					<td align="center"><?php echo substr($item["c_time"], 0, 10); ?></td>
-					<td><?php echo $blogInfo->clip_text($item["content"],40); ?></td>
+					<td><span title="<?php echo $item["content"]; ?>"><?php echo $blogInfo->clip_text($item["content"],40); ?></span></td>
 					<td align="center">
 						<a href="/index.php/ad_edit_comment/<?php echo $item['id']?>">编辑</a>
 						<a href="/index.php/ad_delete_comment/<?php echo $item['id']?>">删除</a>

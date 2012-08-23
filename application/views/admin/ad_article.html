@@ -20,7 +20,7 @@
 				<?php foreach ($artList as $art) { ?>
 				<tr>
 					<td align="center"><?php echo $art["id"]; ?></td>
-					<td><?php echo $blogInfo->clip_text($art["title"],40); ?></td>
+					<td><span title="<?php echo $art["title"]; ?>"><?php echo $blogInfo->clip_text($art["title"],40); ?></span></td>
 					<td align="center"><?php echo $art["category"]; ?></td>
 					<td><?php echo $art["tag"]; ?></td>
 					<td align="center"><?php echo substr($art["pub_date"], 0, 10); ?></td>

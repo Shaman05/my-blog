@@ -8,6 +8,14 @@
 
 $(function(){
     $("a:not(.home)").live("click", loadPage);
+    $("tbody tr",".content").live({
+    	"mouseover" : function(){
+    		$(this).addClass("trHover");
+    	},
+    	"mouseout" : function(){
+    		$(this).removeClass("trHover");
+    	}
+    })
     ajaxPage("ad_article");
 });
 

@@ -94,3 +94,6 @@ body{
 .admin-artlist table th{
 	cursor: pointer;
 }
+.admin-artlist .trHover{
+	background: #efefef;
+}
