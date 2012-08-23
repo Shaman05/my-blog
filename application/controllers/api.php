@@ -44,4 +44,31 @@
 
             echo $html;
         }
+
+        public function ad_article(){
+            $blog = new Myblog();
+            $this->load->model('Admin');
+            $page["artList"] = $this->Admin->artList();
+            $page["blogInfo"] = $blog;
+
+            $this->load->view("admin/ad_article.html", $page);
+        }
+
+        public function ad_comment(){
+            $blog = new Myblog();
+            $this->load->model('Admin');
+            $page["comments"] = $this->Admin->comment();
+            $page["blogInfo"] = $blog;
+
+            $this->load->view("admin/ad_comment.html", $page);
+        }
+
+        public function ad_flink(){
+            $blog = new Myblog();
+            $this->load->model('Admin');
+            $page["flinks"] = $this->Admin->flink();
+            $page["blogInfo"] = $blog;
+
+            $this->load->view("admin/ad_flink.html", $page);
+        }
     }

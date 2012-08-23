@@ -42,9 +42,9 @@
             $header['blogInfo'] = $blog;
             $footer['blogInfo'] = $blog;
 
-            $this->load->view('header', $header);
-            $this->load->view('index', $page);
-            $this->load->view('footer', $footer);
+            $this->load->view('blog/header', $header);
+            $this->load->view('blog/index', $page);
+            $this->load->view('blog/footer', $footer);
         }
 
         //详细文章页
@@ -74,9 +74,9 @@
             $header['blogInfo'] = $blog;
             $footer['blogInfo'] = $blog;
 
-            $this->load->view('header', $header);
-            $this->load->view('show', $page);
-            $this->load->view('footer', $footer);
+            $this->load->view('blog/header', $header);
+            $this->load->view('blog/show', $page);
+            $this->load->view('blog/footer', $footer);
         }
 
         //搜索关键字列表
@@ -96,9 +96,9 @@
             $header['blogInfo'] = $blog;
             $footer['blogInfo'] = $blog;
 
-            $this->load->view('header', $header);
-            $this->load->view('search', $page);
-            $this->load->view('footer', $footer);
+            $this->load->view('blog/header', $header);
+            $this->load->view('blog/search', $page);
+            $this->load->view('blog/footer', $footer);
         }
 
         //标签页
@@ -128,9 +128,9 @@
             $header['blogInfo'] = $blog;
             $footer['blogInfo'] = $blog;
 
-            $this->load->view('header', $header);
-            $this->load->view('index', $page);
-            $this->load->view('footer', $footer);
+            $this->load->view('blog/header', $header);
+            $this->load->view('blog/index', $page);
+            $this->load->view('blog/footer', $footer);
         }
 
         //文章归档
@@ -145,8 +145,8 @@
             $header['blogInfo'] = $blog;
             $footer['blogInfo'] = $blog;
 
-            $this->load->view('header', $header);
-            $this->load->view('archives', $page);
-            $this->load->view('footer', $footer);
+            $this->load->view('blog/header', $header);
+            $this->load->view('blog/archives', $page);
+            $this->load->view('blog/footer', $footer);
         }
     }

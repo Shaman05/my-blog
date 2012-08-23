@@ -23,9 +23,9 @@
             $header['blogInfo'] = $blog;
             $footer['blogInfo'] = $blog;
 
-            $this->load->view('header', $header);
-            $this->load->view('index');
-            $this->load->view('footer', $footer);
+            $this->load->view('blog/header', $header);
+            $this->load->view('blog/index');
+            $this->load->view('blog/footer', $footer);
         }
 
     }

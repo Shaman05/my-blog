@@ -1,0 +1,33 @@
+<h4>友情链接管理</h4>
+<div class="admin-button">
+	<a href="/index.php/ad_add_flink">+ 添加链接</a>
+</div>
+<div class="content">
+	<div class="admin-artlist">
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Site</th>
+					<th>Date</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($flinks as $item) { ?>
+				<tr>
+					<td align="center"><?php echo $item["name"]; ?></td>
+					<td align="center"><?php echo $item["description"]; ?></td>
+					<td><?php echo $item["url"]; ?></td>
+					<td align="center"><?php echo substr($item["add_time"], 0, 10); ?></td>
+					<td align="center">
+						<a href="/index.php/ad_edit_flink/<?php echo $item['id']?>">编辑</a>
+						<a href="/index.php/ad_delete_flink/<?php echo $item['id']?>">删除</a>
+					</td>
+				</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+	</div>
+</div>

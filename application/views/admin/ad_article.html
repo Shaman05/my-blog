@@ -1,0 +1,37 @@
+<h4>文章管理</h4>
+<div class="admin-button">
+	<a href="/index.php/ad_add_article">+ 添加文章</a>
+</div>
+<div class="content">
+	<div class="admin-artlist">
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Category</th>
+					<th>Tag</th>
+					<th>Pubtime</th>
+					<th>Hits</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($artList as $art) { ?>
+				<tr>
+					<td align="center"><?php echo $art["id"]; ?></td>
+					<td><?php echo $blogInfo->clip_text($art["title"],40); ?></td>
+					<td align="center"><?php echo $art["category"]; ?></td>
+					<td><?php echo $art["tag"]; ?></td>
+					<td align="center"><?php echo substr($art["pub_date"], 0, 10); ?></td>
+					<td align="center"><?php echo $art["hits"]; ?></td>
+					<td align="center">
+						<a href="/index.php/ad_edit_article/<?php echo $art['id']?>">编辑</a>
+						<a href="/index.php/ad_delete_article/<?php echo $art['id']?>">删除</a>
+					</td>
+				</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+	</div>
+</div>

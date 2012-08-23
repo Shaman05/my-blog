@@ -1,0 +1,96 @@
+@charset "utf-8";
+/**
+ * Created with JetBrains PhpStorm.
+ * Author: Shaman
+ * Date: 12-8-23
+ * Time: 下午1:31
+ */
+html{ overflow-x:hidden; overflow-y:auto; height: 100%;}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, select, input, textarea, th, td{ margin:0; padding:0 }
+button, input, select, textarea{font:12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif }
+h1{ font-size:18px }
+h2{ font-size:16px }
+h3{ font-size:16px }
+h4, h5, h6{ font-size:100% }
+ul,ol{ list-style:none }
+.syntax-container ol{list-style-type: decimal;}
+a{color:#5D79AE; text-decoration: none;}
+a:hover,.side a:hover{color:#ff6600 }
+q:before, q:after{ content:'' }
+legend{ color:#000 }
+table{width: 100%; border-collapse: collapse;}
+fieldset, img{ border:none }
+button, input, select, textarea{ font-size:100% }
+/*table{ border-collapse:collapse; border-spacing:0 }*/
+.clearfix{zoom:1}
+.clearfix:after{ display:block; height:0; font-size:0; line-height:0; clear:both; visibility:hidden; content:'' }
+
+body{
+	height: 100%;
+    background:url("../images/footer_bg.jpg") repeat 0 0;
+    color:#585858;
+    font-family:'Lucida Grande',Verdana,sans-serif;
+    font-size:13px;
+    line-height:20px;
+    padding:0 30px;
+    min-width:600px;
+}
+.box,.admin-menu{
+	position: absolute;
+	background: #FFF;
+	border-radius: 5px;
+}
+.box{
+	top: 20px;
+	bottom: 60px;
+	left: 15%;
+	right: 15%;
+}
+.admin-menu{
+	bottom: 20px;
+	z-index: 99;
+	width: 400px;
+	height: 20px;
+	line-height: 20px;
+	padding: 5px 12px;
+	left: 50%;
+	margin-left: -200px;
+	box-shadow: 0 0 5px rgba(200,200,200,0.8) inset;
+}
+.admin-menu a{
+	display: inline-block;
+	margin: 0 4px;
+}
+.home{
+	float: right;
+}
+.page{
+	padding: 20px 30px;
+}
+.page h4{
+	border-bottom: 1px solid #333;
+	height: 24px;
+	line-height: 24px;
+}
+.content{
+	position: absolute;
+	padding: 30px 10px;
+	top: 45px;
+	bottom: 20px;
+	left: 30px;
+	right: 30px;
+	overflow: auto;
+}
+.admin-button{
+	position: absolute;
+	right: 30px;
+	top: 22px;
+}
+.admin-artlist table th,
+.admin-artlist table td{
+	border: 1px solid #666;
+	padding: 2px 6px;
+}
+.admin-artlist table th{
+	cursor: pointer;
+}
