@@ -13,7 +13,8 @@
             $admin = 'Shaman',
             $user = 'Devin.Chen',
             $siteUrl = 'http://shaman05.com/',
-            $discripte = '专注WEB前端开发、关注前端动态';
+            $discripte = '专注WEB前端开发、关注前端动态',
+            $loginPwd = 'abcD@1234';
 
         public
             $defaultArtListNum = 5,

@@ -18,7 +18,7 @@ a{color:#5D79AE; text-decoration: none;}
 a:hover,.side a:hover{color:#ff6600 }
 q:before, q:after{ content:'' }
 legend{ color:#000 }
-table{width: 100%; border-collapse: collapse;}
+table{width: 100%; border-collapse: collapse; font-size: 12px}
 fieldset, img{ border:none }
 button, input, select, textarea{ font-size:100% }
 /*table{ border-collapse:collapse; border-spacing:0 }*/
@@ -35,7 +35,7 @@ body{
     padding:0 30px;
     min-width:600px;
 }
-.box,.admin-menu{
+.box,.admin-menu,.login{
 	position: absolute;
 	background: #FFF;
 	border-radius: 5px;
@@ -96,4 +96,16 @@ body{
 }
 .admin-artlist .trHover{
 	background: #efefef;
+}
+.login{
+	width: 300px;
+	height: 85px;
+	padding-top: 15px;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -150px;
+	box-shadow: 0 0 5px rgba(200,200,200,0.8) inset;
+}
+.login table td{
+	padding: 2px 3px;
 }

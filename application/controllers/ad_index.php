@@ -12,6 +12,11 @@
     class Ad_index extends CI_Controller {
 
         function index(){
-            $this->load->view("admin/ad_index.html");
+            $session = $this->session->userdata('loginAdmin');
+            if($session !== FALSE){
+                $this->load->view("admin/ad_index.html");
+            }else{
+                header("Location:ad_login");
+            }
         }
     }

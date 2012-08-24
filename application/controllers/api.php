@@ -22,7 +22,6 @@
                 echo 0;
                 exit;
             }
-
             $this->load->view('blog/article_block', $page);
         }
 
@@ -33,7 +32,6 @@
             $email = $_POST['email'];
             $website = $_POST['website'];
             $content = $_POST['content'];
-            
             $message = $this->Blog->submit_comment($aid, $name, $email, $website, $content);
             echo json_encode($message);
         }
@@ -41,34 +39,44 @@
         public function get_last_comment($aid){
             $this->load->model('Blog');
             $html = $this->Blog->get_last_comment($aid);
-
             echo $html;
         }
 
         public function ad_article(){
-            $blog = new Myblog();
-            $this->load->model('Admin');
-            $page["artList"] = $this->Admin->artList();
-            $page["blogInfo"] = $blog;
-
-            $this->load->view("admin/ad_article.html", $page);
+            $session = $this->session->userdata('loginAdmin');
+            if($session !== FALSE){
+                $blog = new Myblog();
+                $this->load->model('Admin');
+                $page["artList"] = $this->Admin->artList();
+                $page["blogInfo"] = $blog;
+                $this->load->view("admin/ad_article.html", $page);
+            }else{
+                header("Location:ad_login");
+            }
         }
 
-        public function ad_comment(){
-            $blog = new Myblog();
-            $this->load->model('Admin');
-            $page["comments"] = $this->Admin->comment();
-            $page["blogInfo"] = $blog;
-
-            $this->load->view("admin/ad_comment.html", $page);
+        public function ad_comment(){ 
+            if($session !== FALSE){
+                $blog = new Myblog();
+                $this->load->model('Admin');
+                $page["comments"] = $this->Admin->comment();
+                $page["blogInfo"] = $blog;
+                $this->load->view("admin/ad_comment.html", $page);
+                $session = $this->session->userdata('loginAdmin');
+            }else{
+                header("Location:ad_login");
+            }
         }
 
         public function ad_flink(){
-            $blog = new Myblog();
-            $this->load->model('Admin');
-            $page["flinks"] = $this->Admin->flink();
-            $page["blogInfo"] = $blog;
-
-            $this->load->view("admin/ad_flink.html", $page);
+            if($session !== FALSE){
+                $blog = new Myblog();
+                $this->load->model('Admin');
+                $page["flinks"] = $this->Admin->flink();
+                $page["blogInfo"] = $blog;
+                $this->load->view("admin/ad_flink.html", $page);
+            }else{
+                header("Location:ad_login");
+            }
         }
     }
