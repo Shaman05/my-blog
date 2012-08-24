@@ -11,7 +11,12 @@
 
         function __construct(){
             parent::__construct();
-            $this->load->database();
+        }
+
+        function get_admin(){
+            $sql = 'select * from admin limit 1';
+            $query = $this->db->query($sql);
+            return $query->row_array();
         }
 
         function artList(){
@@ -30,5 +35,11 @@
             $sql = 'select * from flinks order by add_time desc';
             $query = $this->db->query($sql);
             return $query->result_array();
+        }
+
+        function get_flink($fid){
+            $sql = 'select * from flinks where id="'.$fid.'" limit 1';
+            $query = $this->db->query($sql);
+            return $query->row_array();
         }
     }

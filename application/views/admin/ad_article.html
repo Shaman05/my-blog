@@ -26,8 +26,8 @@
 					<td align="center"><?php echo substr($art["pub_date"], 0, 10); ?></td>
 					<td align="center"><?php echo $art["hits"]; ?></td>
 					<td align="center">
-						<a href="/index.php/ad_edit_article/<?php echo $art['id']?>">编辑</a>
-						<a href="/index.php/ad_delete_article/<?php echo $art['id']?>">删除</a>
+						<a href="/index.php/ad_edit_article/<?php echo $art['id']?>" rel="edit">编辑</a>
+						<a href="/index.php/ad_delete_article/<?php echo $art['id']?>" rel="del">删除</a>
 					</td>
 				</tr>
 				<?php } ?>

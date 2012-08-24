@@ -22,7 +22,7 @@
             $topXarticle = 5;
 
         public function show_rights(){
-            return 'Copyright &copy; 2012. &nbsp; Theme by <a href="/" title="' . $this->name . '">' . $this->admin . '</a>';
+            return 'Copyright &copy; 2012. &nbsp; Theme by <a href="/" title="' . $this->name . '">' . $this->admin . '</a>&nbsp;&nbsp;<a href="/index.php/ad_login">admin</a>';
         }
 
         public function clip_text($str, $len = 20, $dot = TRUE){

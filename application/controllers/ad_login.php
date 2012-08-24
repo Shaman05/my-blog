@@ -17,7 +17,9 @@
             $pwd = $this->input->post('pwd');
             if(isset($admin) && isset($pwd)){
                 $blog = new Myblog();
-                if(($admin == $blog->admin) && ($pwd == $blog->loginPwd)){
+                $this->load->model("Admin");
+                $adminInfo = $this->Admin->get_admin();
+                if(($admin == $adminInfo["name"]) && ($pwd == $adminInfo["password"])){
                     $this->session->set_userdata("loginAdmin", "shaman");
                     header("Location:ad_index");
                 }

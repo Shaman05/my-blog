@@ -1,0 +1,50 @@
+<h4>添加新的链接</h4>
+<div class="admin-button">
+	<a href="/index.php/ad_flink">&lt;&lt; 返回</a>
+</div>
+<div class="content">
+	<div class="admin-edit">
+		<input type="hidden" id="fid" value="<?php if(isset($flink["id"]))echo $flink["id"]; ?>">
+		<table>
+			<tr>
+				<td align="right" width="100">名称:</td>
+				<td><input type="text" id="fname" value="<?php if(isset($flink["name"]))echo $flink["name"]; ?>"></td>
+			</tr>
+			<tr>
+				<td align="right">主人名称:</td>
+				<td><input type="text" id="fowner" value="<?php if(isset($flink["owner"]))echo $flink["owner"]; ?>"></td>
+			</tr>
+			<tr>
+				<td align="right">地址:</td>
+				<td><input type="text" id="furl" value="<?php if(isset($flink["url"]))echo $flink["url"]; ?>"></td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">描述:</td>
+				<td><textarea cols="50" rows="5" id="fdesc"><?php if(isset($flink["description"]))echo $flink["description"]; ?></textarea></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><button onclick="addFlink()">确定</button></td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript">
+	function addFlink(){
+		var fid = $("#fid").val() || null;
+			fname = $.trim($("#fname").val()),
+			fowner = $.trim($("#fowner").val()),
+			furl = $.trim($("#furl").val()),
+			fdesc = $.trim($("#fdesc").val());
+		if(fname && furl){
+			$.ajax({
+				type : "POST",
+				url : "/index.php/api/add_flink",
+				data : {id:fid,name:fname,owner:fowner,url:furl,desc:fdesc},
+				success : function(message){
+					alert(message);
+				}
+			})
+		}
+	}
+	</script>
+</div>

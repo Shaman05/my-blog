@@ -1,6 +1,6 @@
 <h4>友情链接管理</h4>
 <div class="admin-button">
-	<a href="/index.php/ad_add_flink">+ 添加链接</a>
+	<a href="/index.php/ad_edit_flink">+ 添加链接</a>
 </div>
 <div class="content">
 	<div class="admin-artlist">
@@ -22,8 +22,8 @@
 					<td><?php echo $item["url"]; ?></td>
 					<td align="center"><?php echo substr($item["add_time"], 0, 10); ?></td>
 					<td align="center">
-						<a href="/index.php/ad_edit_flink/<?php echo $item['id']?>">编辑</a>
-						<a href="/index.php/ad_delete_flink/<?php echo $item['id']?>">删除</a>
+						<a href="/index.php/ad_edit_flink/<?php echo $item['id']?>" rel="edit">编辑</a>
+						<a href="/index.php/ad_delete_flink/<?php echo $item['id']?>" rel="del">删除</a>
 					</td>
 				</tr>
 				<?php } ?>
