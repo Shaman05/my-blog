@@ -21,3 +21,4 @@
 	if (extension_loaded('zlib')) {
 		ob_end_flush(); //输出buffer中的内容，即压缩后的css文件
 	}
+?>
