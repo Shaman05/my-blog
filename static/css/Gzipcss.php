@@ -1,4 +1,4 @@
-<? php
+<?php
 
 	if (extension_loaded('zlib')) { //检查服务器是否开启了zlib拓展
 		ob_start('ob_gzhandler');
@@ -21,4 +21,3 @@
 	if (extension_loaded('zlib')) {
 		ob_end_flush(); //输出buffer中的内容，即压缩后的css文件
 	}
-?>
